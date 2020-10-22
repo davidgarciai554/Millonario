@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.layout')
+@section('contenido')
 
-        <title>Millonario</title>
-        <script src="{{ asset('js/app.js') }}" defer></script>
-		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <h1>¿Quien quiere ser millonario?</h1>
+    <p>De que trata el juego (rellenar)</p>
+    <p>Imagen millonarios</p>
+    <a  class="btn btn-outline-success" href="{{ url('vistaPreguntas') }}">Empieza!</a>
 
-    </head>
-    <body>
-        <h1>Millonario</h1>
-    </body>
-</html>
+@endsection
