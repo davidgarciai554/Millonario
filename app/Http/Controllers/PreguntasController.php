@@ -7,13 +7,6 @@ use App\Preguntas;
 
 class PreguntasController extends Controller
 {
-    public function devuelve_pregunta()
-    {
-        $temas = array("Economia", "Filosofia", "Historia", "Lengua", "Ingles");
-
-        return Preguntas::where('tema', array_rand($temas, 4))->inRandomOrder()->first();
-    }
-
     public function carga_pregunta()
     {
         $temas = array("Economia", "Filosofia", "Historia", "Lengua", "Ingles");
