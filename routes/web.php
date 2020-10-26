@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/vistaPreguntas', function () {
-    return view('vistaPreguntas');
-});
+// Route::get('/vistaPreguntas', function () {
+//     return view('vistaPreguntas');
+// });
 
-Route::get('/vistaPreguntas', 'PreguntasController@carga_pregunta'); 
+Route::get('/vistaPreguntas/{numPreguntas}', 'PreguntasController@carga_pregunta'); 

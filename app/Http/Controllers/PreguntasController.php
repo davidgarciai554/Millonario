@@ -7,11 +7,12 @@ use App\Preguntas;
 
 class PreguntasController extends Controller
 {
-    public function carga_pregunta()
+    public function carga_pregunta($numPreguntas)
     {
         $temas = array("Economia", "Filosofia", "Historia", "Lengua", "Ingles");
         return view('/vistaPreguntas')
             ->with('pregunta', Preguntas::where('tema', array_rand($temas, 5))->inRandomOrder()->limit(1)->get())
-            ->with('tema', array_rand($temas, 5));
+            ->with('tema', array_rand($temas, 5))
+            ->with('numPreguntas',$numPreguntas);
     }
 }
